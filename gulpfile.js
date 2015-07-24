@@ -16,6 +16,7 @@ var rev = require('gulp-rev');
 var paths = {
     css: ['./styles/*.css'],
     html: ['./views/*.html'],
+    img: ['./images/*.*'],
     buildPath: './build'
 
 };
@@ -95,14 +96,23 @@ gulp.task('usemin', function(){
  */
 gulp.task('clean', function () {
     return gulp.src(paths.buildPath)
-        .pipe(clean({force: true}));
+        .pipe(clean({force: true}))
+        .end();
+});
+
+/**
+ * 拷贝图片目录
+ */
+gulp.task('copyFolder', function(){
+    // 图片排量拷贝
+    gulp.src(paths.img)
+        .pipe(gulp.dest(paths.buildPath + '/images/'));
 });
 
 
 // 开发时执行
 gulp.task('dev', ['browser-sync', 'watch']);
 
-
 // 打包文件
-gulp.task('build', ['clean', 'usemin']);
+gulp.task('build', ['clean', 'usemin', 'copyFolder']);
 

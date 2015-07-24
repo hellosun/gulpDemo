@@ -124,7 +124,7 @@ gulpfile文档配置
 
 目录结构
 
-![folder](images/folder.png "Optional title")
+![folder](images/folder.png "folder")
 
 ####2.3.1 压缩合并js，减少http请求，加快网页生成速度
 
@@ -162,6 +162,11 @@ gulpfile文档配置
         }))
         .pipe(gulp.dest('./build'));   
 	});
+
+
+最终打包目录
+
+![build](images/build.png)
 
 
 
