@@ -1,0 +1,12 @@
+h1 {
+	color: blue; 
+	text-align: center;
+	font-size: 80px;
+}
+
+h2 {
+	color:red;
+	font-size: 100px;
+	text-align: center;
+}
+body {background: #aaa;}
