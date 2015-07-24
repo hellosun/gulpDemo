@@ -121,6 +121,11 @@ gulpfile文档配置
 
 
 ###2.3 部署发布
+
+目录结构
+
+![folder](images/folder.png "Optional title")
+
 ####2.3.1 压缩合并js，减少http请求，加快网页生成速度
 
 使用 `gulp-usemin` 合并、压缩css、js文件并且添加版本号
